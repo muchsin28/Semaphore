@@ -2,7 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
 }
+
 h1{
   font-family: 'Cabin Sketch', cursive;
   font-weight: bold;
@@ -11,9 +13,9 @@ h1{
 
 body{
   min-width: 320px;
-  background-image: url(./camp.svg);
+  background-image: url(./flag.svg);
   background-repeat: no-repeat;
-  background-size: 25%;
+  background-size: 20%;
   background-position: right top;
 }
 header{
@@ -27,16 +29,21 @@ p{
   width: 90%;
   font-family: 'Comic Neue', cursive;
   
+
 }
+
 #start{
-  display: none;
-  margin: 0 auto;
-}
-#start{
-  background-color: teal;
+  background-image: url(./camp.svg);
+  background-repeat:no-repeat;
+  background-position: left;
+  background-size: 50%;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   width: 100%;
+  min-width: 320px;
+  display: none;
+  margin: 0 auto;
+  text-align: right;
 }
 section{
   margin: 10px auto;
@@ -75,16 +82,16 @@ main button{
  
   display: inline-block;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: bottom;
   border: 1px solid green;
-  margin: 10px 30px;
-  width: 300px;
+  margin: 10px 10px;
+  width: 350px;
   padding: 20px 0;
   border-radius: 10px;
   background-color: white;
- 
-  
+
 }
+
 .box p{
   font-weight: bolder;
   font-size: large;
@@ -93,28 +100,58 @@ main button{
   font-weight: bolder;
   font-size: xx-large;
 }
+#mid-box{
+  /* width:345px; */
+  padding-top: 1px;
+
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: teal;
+
+}
+#right-box{
+  border: 2px solid teal;
+  /* width:300px; */
+  padding-top: 1px;
+  background-color: teal;
+  bottom: 20px;
+}
+
+#salah, #score{
+  width:90%
+}
+
+#salah{
+  display:none;
+}
 .box #peraga{
   width: auto;
   max-height: 900px;
-  top:80px;
-  border: 3px solid teal;
-  margin: 30px 1px;
+  /* top:50px; */
+  border: 5px solid teal;
+  background-color: white;
+  margin-bottom:10px;
+  border-radius: 50%;
 
 }
 .box #peraga img{
   width: 100%;
-  margin: 0;
-  padding: 5;
+  padding: 20px;
+  top: 0px;
   
 }
 .box #jawaban{
   font-weight: bold;
   font-family: 'Special Elite', cursive;
+  color: white;
 }
 .box #jawaban #answer{
   text-align: center;
   text-transform: uppercase;
   width: 80%;
+  color: white;
+  padding-bottom: 2;
+ 
 
 }
 .box p#nilai {
@@ -134,10 +171,11 @@ input[type=text] {
   margin: 10px 20;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid teal;
+  border-bottom: 2px solid white;
   font-size: x-large;
   font-family: 'Special Elite', cursive;
+  background-color:teal;
 }
-
-
-
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
