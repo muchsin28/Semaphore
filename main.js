@@ -11,12 +11,21 @@ function myFunction() {
   }
 }
 let reset = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Semaphore_Ready.svg";
-let data= "k-a-m-u-"
+
+let count= 0
+let data=['a-y-a-h-','i-b-u-','a-d-e-']
+let soal= data[count]
+
+
 function switcImage() {
+  
+  soal= data[count]
+  console.log(soal, count)
   let y= document.getElementsByClassName("flag");
-  for(let i=0; i<data.length; i++){
+  for(let i=0; i<soal.length; i++){
+
     for(let j=0; j<y.length; j++){
-      if(y[j].childNodes[1].id === data[i]){
+      if(y[j].childNodes[1].id === soal[i]){
         setTimeout(function timer() {
           // console.log( y[j].childNodes[1].src);
           let z= y[j].childNodes[1].src;
@@ -41,9 +50,11 @@ function isAlpha(kata){
 function cekJawaban(){
   let cek= document.getElementById("answer").value;
   let score= Number(document.getElementById("nilai").innerText);
-  let datAlpha= isAlpha(data)
+  let datAlpha= isAlpha(soal)
   if(cek === datAlpha){
     document.getElementById("nilai").innerText = score+100
+    count++
+    document.getElementById("answer").value ='';
   }
   
 }
