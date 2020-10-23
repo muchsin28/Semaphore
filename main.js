@@ -13,17 +13,26 @@ function myFunction() {
 let reset = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Semaphore_Ready.svg";
 
 let count= 0
-let data=['a-y-a-h-','i-b-u-','a-d-e-']
-let soal= data[count]
+let level1=[
+'i-b-u-',
+'a-d-e-',
+'a-i-r-',
+'a-p-i-',
+'h-i-u-',
+'d-u-a-',
+'d-i-a-',
+'a-k-u-',
+'b-c-a-',
+'b-r-i-']
+let soal= level1[count]
 
 
 function switcImage() {
   
-  soal= data[count]
+  soal= level1[count]
   console.log(soal, count)
   let y= document.getElementsByClassName("flag");
   for(let i=0; i<soal.length; i++){
-
     for(let j=0; j<y.length; j++){
       if(y[j].childNodes[1].id === soal[i]){
         setTimeout(function timer() {
